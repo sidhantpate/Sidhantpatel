@@ -1,0 +1,22 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circular background -->
+  <circle cx="96" cy="96" r="90" fill="#eaf1ff" stroke="#1e5eff" stroke-width="4"/>
+  
+  <!-- Inner circle with gradient -->
+  <defs>
+    <radialGradient id="bgGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#4a90ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e5eff;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <circle cx="96" cy="96" r="75" fill="url(#bgGradient)"/>
+  
+  <!-- Initials text -->
+  <text x="96" y="105" font-size="64" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="Arial, sans-serif">SP</text>
+  
+  <!-- Decorative dots -->
+  <circle cx="140" cy="50" r="4" fill="#ffffff" opacity="0.6"/>
+  <circle cx="160" cy="96" r="3" fill="#ffffff" opacity="0.5"/>
+  <circle cx="145" cy="145" r="4" fill="#ffffff" opacity="0.6"/>
+</svg>
