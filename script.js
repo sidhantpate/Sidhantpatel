@@ -57,6 +57,65 @@ document.querySelectorAll('.portrait-frame, .project-card').forEach((card) => {
 });
 
 // Form interactions and animations
+const birthdayPopup = document.getElementById('birthday-popup');
+const birthdayImage = document.getElementById('birthday-popup-image');
+const birthdayCloseBtn = document.querySelector('.birthday-close-btn');
+const birthdayImageCandidates = ['birthday-wishes.jpg', 'birthday-wishes.png', 'birthday-wishes.webp'];
+
+function loadBirthdayImage() {
+  if (!birthdayImage) return;
+
+  let currentIndex = 0;
+
+  const tryLoad = () => {
+    if (currentIndex >= birthdayImageCandidates.length) {
+      birthdayImage.alt = 'Birthday wishes';
+      return;
+    }
+
+    birthdayImage.src = birthdayImageCandidates[currentIndex];
+    currentIndex += 1;
+  };
+
+  birthdayImage.onerror = () => {
+    tryLoad();
+  };
+
+  tryLoad();
+}
+
+function openBirthdayPopup() {
+  if (!birthdayPopup) return;
+
+  birthdayPopup.classList.add('show');
+  document.body.classList.add('modal-open');
+}
+
+function closeBirthdayPopup() {
+  if (!birthdayPopup) return;
+
+  birthdayPopup.classList.remove('show');
+  document.body.classList.remove('modal-open');
+}
+
+if (birthdayCloseBtn) {
+  birthdayCloseBtn.addEventListener('click', closeBirthdayPopup);
+}
+
+if (birthdayPopup) {
+  birthdayPopup.addEventListener('click', (event) => {
+    if (event.target === birthdayPopup) {
+      closeBirthdayPopup();
+    }
+  });
+}
+
+loadBirthdayImage();
+
+window.addEventListener('load', () => {
+  setTimeout(openBirthdayPopup, 400);
+});
+
 const contactForm = document.querySelector('#contact-form');
 const formInputs = document.querySelectorAll('.form-input');
 const formMessage = document.querySelector('.form-message');
