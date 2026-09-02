@@ -390,7 +390,8 @@ h2 em {
   --rx: 0deg;
   --ry: 0deg;
   --lift: 0px;
-  aspect-ratio: 1 / 1.08;
+  width: 100%;
+  aspect-ratio: 1086 / 1448;
   padding: 10px;
   border: 1px solid var(--line);
   background: var(--panel);
@@ -822,7 +823,7 @@ form .button {
   position: relative;
   width: min(750px, 92vw);
   max-width: 750px;
-  aspect-ratio: 1240 / 716;
+  aspect-ratio: 1086 / 1448;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   overflow: hidden;
