@@ -822,7 +822,7 @@ form .button {
   position: relative;
   width: min(750px, 92vw);
   max-width: 750px;
-  aspect-ratio: 1500 / 2000;
+  aspect-ratio: 1240 / 716;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   overflow: hidden;
