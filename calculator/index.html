@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#edf2f9" />
+  <title>Nova Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="calculator" role="application" aria-label="Scientific calculator">
+    <header class="calc-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">∑</span>
+        <div>
+          <h1>Scientific Calculator</h1>
+          <p>Precision at your fingertips</p>
+        </div>
+      </div>
+      <div class="header-options">
+        <div class="mode">
+          <span class="mode-label">ANGLE</span>
+          <button id="angle-toggle" class="btn small" type="button" aria-label="Angle mode: degrees">DEG</button>
+        </div>
+        <div class="mode">
+          <span class="mode-label">RESULT</span>
+          <button id="format-toggle" class="btn small" type="button" aria-label="Result format: fractions" aria-pressed="true" title="Switch to decimal results">FRAC</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="display">
+      <div id="expr" class="expr" aria-live="polite"></div>
+      <div id="result" class="result" aria-live="polite">0</div>
+    </section>
+
+    <section class="buttons" role="group" aria-label="Calculator buttons">
+      <!-- row 1 -->
+      <button class="btn func clear" type="button" data-action="clear" aria-label="Clear all" title="Clear all">Clear</button>
+      <button class="btn func" type="button" data-action="clear-entry">CE</button>
+      <button class="btn func" type="button" data-action="back" aria-label="Backspace">⌫</button>
+      <button class="btn func" type="button" data-value="(">(</button>
+      <button class="btn func" type="button" data-value=")">)</button>
+
+      <!-- row 2 -->
+      <button class="btn func" type="button" data-value="sin(">sin</button>
+      <button class="btn func" type="button" data-value="cos(">cos</button>
+      <button class="btn func" type="button" data-value="tan(">tan</button>
+      <button class="btn func" type="button" data-value="^">x<sup>y</sup></button>
+      <button class="btn func" type="button" data-value="percent">%</button>
+
+      <!-- row 3 -->
+      <button class="btn func" type="button" data-value="asin(">asin</button>
+      <button class="btn func" type="button" data-value="acos(">acos</button>
+      <button class="btn func" type="button" data-value="atan(">atan</button>
+      <button class="btn func" type="button" data-value="ln(">ln</button>
+      <button class="btn func" type="button" data-value="log(">log</button>
+
+      <!-- row 4 -->
+      <button class="btn func" type="button" data-value="√(">√</button>
+      <button class="btn func" type="button" data-value="!">x!</button>
+      <button class="btn func" type="button" data-value="pi">π</button>
+      <button class="btn func" type="button" data-value="e">e</button>
+      <button class="btn op" type="button" data-value="/" aria-label="Divide" title="Divide">÷</button>
+
+      <!-- row 5 -->
+      <button class="btn num" type="button" data-value="7">7</button>
+      <button class="btn num" type="button" data-value="8">8</button>
+      <button class="btn num" type="button" data-value="9">9</button>
+      <button class="btn op" type="button" data-value="*" aria-label="Multiply" title="Multiply">×</button>
+      <button class="btn func" type="button" data-action="ans">Ans</button>
+
+      <!-- row 6 -->
+      <button class="btn num" type="button" data-value="4">4</button>
+      <button class="btn num" type="button" data-value="5">5</button>
+      <button class="btn num" type="button" data-value="6">6</button>
+      <button class="btn op" type="button" data-value="-" aria-label="Subtract" title="Subtract">−</button>
+      <button class="btn func" type="button" data-value="pow(">e<sup>x</sup></button>
+
+      <!-- row 7 -->
+      <button class="btn num" type="button" data-value="1">1</button>
+      <button class="btn num" type="button" data-value="2">2</button>
+      <button class="btn num" type="button" data-value="3">3</button>
+      <button class="btn op" type="button" data-value="+" aria-label="Add" title="Add">+</button>
+      <button class="btn equal" type="button" data-action="eval">=</button>
+
+      <!-- row 8 -->
+      <button class="btn num zero" type="button" data-value="0">0</button>
+      <button class="btn num" type="button" data-value=".">.</button>
+      <button class="btn func" type="button" data-action="neg">+/−</button>
+    </section>
+
+    <footer class="note">
+      <span>Enter = calculate <span aria-hidden="true">·</span> Esc = clear <span aria-hidden="true">·</span> DEG / RAD</span>
+      <span class="credit">Created by <strong>Sidhant</strong></span>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
